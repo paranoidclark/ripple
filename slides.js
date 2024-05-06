@@ -1,20 +1,20 @@
 export default [
     {
         id: '1',
-        title: 'Welcome to the app!',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus rutrum nibh, id ultricies odio commodo sed. Phasellus et varius nisl. Suspendisse mauris nulla, accumsan gravida elit non, porta consectetur magna.',
+        title: 'Welcome to Ripple!',
+        description: 'Your personal reminder companion designed to keep you hydrated, healthy, and on track with your daily routines.',
         image: require('./assets/images/onboard_1.png'),
     },
     {
         id: '2',
-        title: 'Welcome to the app!',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus rutrum nibh, id ultricies odio commodo sed. Phasellus et varius nisl. Suspendisse mauris nulla, accumsan gravida elit non, porta consectetur magna.',
+        title: 'Stay Hydrated, Stay Healthy!',
+        description: "Ripple's primary goal is to ensure you never miss a sip of water, offering gentle reminders throughout the day to keep you hydrated and feeling your best.",
         image: require('./assets/images/onboard_2.png'),
     },
     {
         id: '3',
-        title: 'Welcome to the app!',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus rutrum nibh, id ultricies odio commodo sed. Phasellus et varius nisl. Suspendisse mauris nulla, accumsan gravida elit non, porta consectetur magna.',
+        title: 'Tailored Just for You!',
+        description: "Customize Ripple to match your lifestyle with personalized alarm settings, intuitive interface, and seamless integration with your daily routines.",
         image: require('./assets/images/onboard_3.png'),
     },
 ]

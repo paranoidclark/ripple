@@ -27,17 +27,20 @@ const styles = StyleSheet.create({
     },
     image: {
         flex: 0.7,
+        marginTop: 100,
         justifyContent: 'center',
     },
     title: {
         fontWeight: '800',
         fontSize: 28,
+        marginTop: 30,
         marginBottom: 10,
         color: '#493d8a',
         textAlign: 'center',
     },
     description: {
         fontWeight: '300',
+        fontSize: 16,
         color: '#62656b',
         textAlign: 'center',
         paddingHorizontal: 64,

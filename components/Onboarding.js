@@ -4,6 +4,7 @@ import { StyleSheet, View, FlatList, Animated } from 'react-native'
 import OnboardingItem from '../components/OnboardingItem'
 import Paginator from '../components/Paginator'
 import NextButton from '../components/NextButton'
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import slides from '../slides'
 
 export default Onboarding = () => {
@@ -18,11 +19,15 @@ export default Onboarding = () => {
     // Goes to the next slide if user scrolls atleast 50% of the current slide
     const viewConfig = useRef({ viewAreaCoveragePercentThreshold: 50 }).current;
 
-    const scrollTo = () => {
+    const scrollTo = async () => {
         if (currentIndex < slides.length - 1) {
             slidesRef.current.scrollToIndex({ index: currentIndex + 1 });
         } else {
-            console.log('Last slide');
+            try {
+                await AsyncStorage.setItem('@viewedOnboarding', 'true');
+            } catch (err) {
+                console.log('Error @scrollTo: ', err);
+            }
         }
     }
 
