@@ -37,6 +37,12 @@ export default function HomeScreen() {
                 <Text style={styles.subHeading}>
                     Set your daily hydration schedule and we will remind you to drink water throughout the day.
                 </Text>
+                <Text style={styles.heading}>What days would you</Text>
+                <Text style={styles.heading}>like be reminded?</Text>
+
+                <Text style={styles.subHeading}>
+                    Set your daily hydration schedule and we will remind you to drink water throughout the day.
+                </Text>
             </View>
 
             <View style={styles.timePickerWrapper}>
