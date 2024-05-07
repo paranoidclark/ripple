@@ -1,7 +1,9 @@
 import React, { useState, useRef } from 'react'
 import { StyleSheet, View, FlatList, Animated } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 
 import OnboardingItem from '../components/OnboardingItem'
+import HomeScreen from './Home/HomeScreen'
 import Paginator from '../components/Paginator'
 import NextButton from '../components/NextButton'
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -11,6 +13,7 @@ export default Onboarding = () => {
     const [currentIndex, setCurrentIndex] = useState(0)
     const scrollX = useRef(new Animated.Value(0)).current;
     const slidesRef = useRef(null);
+    // const navigation = useNavigation();
 
     const viewableItemsChanged = useRef(({ viewableItems }) => {
         setCurrentIndex(viewableItems[0].index);
@@ -25,8 +28,9 @@ export default Onboarding = () => {
         } else {
             try {
                 await AsyncStorage.setItem('@viewedOnboarding', 'true');
+                // navigation.navigate('HomeScreen')
             } catch (err) {
-                console.log('Error @scrollTo: ', err);
+                console.log('Error @setItem: ', err);
             }
         }
     }
